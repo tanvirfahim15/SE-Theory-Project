@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Csedu | Home</title>
+
+
+    <script>
+
+        window.onload=function () {
+            login();
+            document.getElementById("footer").className += " fixed-bottom";
+        }
+
+
+
+    </script>
+
+
+    {% include "nav.html" %}
+
+
+</head>
+
+<body>
+<div align="center">
+    <div style="width: 80%">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1>Welcome to CSEDU</h1>
+
+        <br/>
+        <br/>
+        <h3>
+            <a href="/courses/" >
+                Courses
+            </a>
+            <br/>
+            <br/>
+            <a href="/Routine/">
+                Routine
+            </a>
+            <br/>
+            <br/>
+            <a  href="/Result/">
+                Result
+            </a>
+        </h3>
+    </div>
+</div>
+</body>
+<footer> {% include "footer.html" %}</footer>
+
+</html>

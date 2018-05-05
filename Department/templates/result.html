@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSEDU | {{str}}</title>
+
+
+    <script>
+
+        window.onload=function () {
+            login();
+            document.getElementById("footer").className += " fixed-bottom";
+        }
+
+
+
+    </script>
+
+
+    {% include "nav.html" %}
+
+
+</head>
+
+<body>
+<div align="center">
+    <div style="width: 80%">
+        <div align="center">
+    <style>
+    table.my {
+    border-collapse: collapse;
+}
+
+table.my, th.my, td.my {
+    border: 1px solid black;
+}
+</style>
+<div align="center">
+    <div style="width: 80%" align="left">
+        <br/>
+        <div style="border: 1px solid #272f45">
+            <div style="background: #272f45;color: #effff8;">
+                <h2>&nbsp;Result:</h2>
+            </div>
+            <div style="margin-left: 15px;font-size: large">
+                <table>
+                    <tr>
+                        <td>
+                            <b>Student:</b>
+                        </td>
+                        <td>
+                            Bulbul Chowdhury (57859)
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <table class="my">
+
+                    <tr class="my">
+                        <td class="my">
+                            <b>Course:</b>
+                        </td>
+                        <td class="my">
+                            <b>Credit:&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                        </td>
+                        <td class="my">
+                            <b>Semester:&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                        </td>
+                        <td class="my">
+                            <b>Session</b>
+                        </td>
+                        <td class="my">
+                            <b>Instructor:</b>
+                        </td>
+                        <td class="my">
+                            <b>Grade:&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                        </td>
+
+                    </tr>
+                    <tr class="my">
+                        <td class="my">
+                            Computer Networking (17859)&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="my">
+                            3.00
+                        </td>
+                        <td class="my">
+                            Fall
+                        </td>
+                        <td class="my">
+                            2015-16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="my">
+                            Kashem Chowdhury (3785)&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="my">
+                            <b>A+</b>
+                        </td>
+                    </tr>
+                    <tr class="my">
+                        <td class="my">
+                            Database Management (87859)&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="my">
+                            3.00
+                        </td>
+                        <td class="my">
+                            Fall
+                        </td>
+                        <td class="my">
+                            2015-16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="my">
+                            John Korth (5785)&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td class="my">
+                            <b>A+</b>
+                        </td>
+                    </tr>
+                </table>
+                <br/><br/>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+    </div>
+</div>
+</body>
+<footer> {% include "footer.html" %}</footer>
+
+</html>

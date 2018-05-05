@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSEDU | Registration</title>
+
+
+    <script>
+
+        window.onload=function () {
+            display_error();
+            login();
+            document.getElementById("footer").className += " fixed-bottom";
+        }
+
+        var data = {{data|tojson}};
+        console.log(data);
+
+        function display_error() {
+            if(data != null) {
+                if (data['username_msg'] != null)
+                    document.getElementById('username_msg').innerText = data['username_msg'];
+                if (data['password_msg'] != null)
+                    document.getElementById('password_msg').innerText = data['password_msg'];
+                if (data['password_again_msg'] != null)
+                    document.getElementById('password_again_msg').innerText = data['password_again_msg'];
+                if(data['username']!=null)
+                    document.getElementById('username').value = data['username'];
+            }
+        }
+
+    </script>
+
+
+    {% include "nav.html" %}
+
+
+</head>
+
+<body>
+<div align="center">
+    <div style="width: 80%">
+        <br/>
+        <h2>Register</h2>
+        <br/>
+
+        <form action = "/auth/register-validation" method = "POST" style="width: 30%">
+            <div class="form-group">
+                <label for="username">ID</label>
+                <input type="text" class="form-control" id="id" name="id">
+                <span id="id_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+                <span id="username_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+                <span id="password_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password Again</label>
+                <input type="password" class="form-control" id="password_again" name="password_again">
+                <span id="password_again_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" name="fname">
+                <span id="fname_msg" style="font-size: small;color: red"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" name="lname">
+                <span id="lname_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="fa_name">Father's Name</label>
+                <input type="text" class="form-control" id="fa_name" name="Father_name">
+            </div>
+            <div class="form-group">
+                <label for="mo_name">Mother's Name</label>
+                <input type="text" class="form-control" id="mo_name" name="Mother_name">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" name="dob" id="dob">
+                <span id="dob_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                Gender:<br/>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+
+            </div>
+            <div class="form-group">
+                Marital Status:<br/>
+                <input type="radio" name="marital_status" value="Single" checked> Single
+                <input type="radio" name="marital_status" value="Married"> Married
+                <input type="radio" name="marital_status" value="Divorced"> Divorced
+                <input type="radio" name="marital_status" value="Widowed"> Widowed
+            </div>
+            <div class="form-group">
+                <label for="phn">Phone No.</label>
+                <input type="text" class="form-control" id="phn" name="phn">
+                <span id="phn_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="addr">Address:</label>
+                <input type="text" class="form-control" id="addr" name="addr"><br/>
+                <span id="addr_msg" style="font-size: small;color: red"></span>
+            </div>
+            <div class="form-group">
+                <label for="addr"> Permanent Address:</label>
+                <input type="text" class="form-control" id="addr1" name="addr1">
+            </div>
+
+
+
+            <br/>
+            <div class="form-group">
+                <input type="submit" class="btn btn-dark btn-lg" value="Register">
+            </div>
+        </form>
+        <a href="/">Log In</a>
+    </div>
+</div>
+</body>
+<footer> {% include "footer.html" %}</footer>
+
+</html>

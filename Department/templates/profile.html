@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSEDU | Student Profile</title>
+
+
+    <script>
+
+        window.onload=function () {
+            login();
+            document.getElementById("footer").className += " fixed-bottom";
+        }
+
+
+
+    </script>
+
+
+    {% include "nav.html" %}
+
+
+</head>
+
+<body>
+<div align="center">
+    <div style="width: 80%">
+        <h1>{{name}}</h1>
+        <br/>
+        <br/>
+        <table>
+            <tr>
+                <td>
+                    <a href="/change/"> <button class="btn btn-dark">Change Profile Info</button></a>
+                </td>
+                <td>
+                    <a href="/delete/{{name}}/"><button class="btn btn-danger">Delete Account</button></a>
+                </td>
+            </tr>
+        </table>
+        <div align="center">
+            <div style="width: 80%" align="left">
+                <br/>
+                <div style="border: 1px solid #272f45">
+                    <div style="background: #272f45;color: #effff8;">
+                        <h2>&nbsp;Student Information</h2>
+                    </div>
+                    <div style="margin-left: 15px;font-size: large">
+                        <table>
+                            <tr>
+                                <td>
+                                    <b>ID:</b>
+                                </td>
+                                <td>
+                                    {{user['id']}}
+                                </td>
+                            </tr><tr></tr>
+
+                            <tr>
+                                <td>
+                                    <b>Name:</b>
+                                </td>
+                                <td>
+                                    {{user['fname']}} {{user['lname']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Father's Name:</b>
+                                </td>
+                                <td>
+                                    {{user['Father_name']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mother's Name:&nbsp;&nbsp;</b>
+                                </td>
+                                <td>
+                                    {{user['Mother_name']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Date of Birth:</b>
+                                </td>
+                                <td>
+                                    {{user['dob']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Gender:</b>
+                                </td>
+                                <td>
+                                    {{user['gender']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Marital Status:</b>
+                                </td>
+                                <td>
+                                    {{user['marital_status']}}
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Contact Information:</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Phone Number:</b>
+                                </td>
+                                <td>
+                                    {{user['phn']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mailing Address:</b>
+                                </td>
+                                <td>
+                                    {{user['addr']}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Permanent Address:</b>
+                                </td>
+                                <td>
+                                    {{user['addr1']}}
+                                </td>
+                            </tr>
+                        </table>
+                        <br/><br/>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<footer> {% include "footer.html" %}</footer>
+
+</html>
